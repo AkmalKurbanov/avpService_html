@@ -1,0 +1,315 @@
+.leftColWrap {
+  display: inline-block;
+  max-width: rem(422);
+  width: 100%;
+  position: fixed;
+
+
+  @media (max-width: 1199.98px) {
+    max-width: rem(300);
+  }
+
+  @media (max-width: 991.98px) {
+    max-width: rem(250);
+  }
+
+  @media (max-width: 767.98px) {
+    max-width: 100%;
+    position: relative;
+  }
+
+  .leftCol {
+    width: 100%;
+    max-width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $mc;
+    padding: rem(95) 0 rem(44);
+    position: relative;
+
+
+    @media (max-width: 1599.98px) {
+      padding: rem(47) 0 rem(44);
+    }
+
+    @media (max-width: 1199.98px) {
+      padding: rem(30) 0 rem(15);
+    }
+     @media (max-width: 991.98px) {
+       padding: rem(30) 0 rem(10);
+     }
+
+
+
+
+    @media (max-width: 767.98px) {
+      padding-top: 0;
+      padding-bottom: 0;
+      background: none;
+      height: auto;
+      align-items: flex-start;
+    }
+
+
+    ul {
+      margin: 0;
+      padding: 0;
+      text-align: center;
+
+      @media (max-width: 767.98px) {
+        text-align: left;
+      }
+
+      li {
+        list-style: none;
+
+        a {
+          color: $wc;
+          font-size: rem(18);
+
+          @media (max-width: 1199.98px) {
+            font-size: rem(17);
+          }
+
+          @media (max-width: 575.98px) {
+            font-size: rem(16);
+          }
+        }
+      }
+    }
+
+    .logoWrap {
+      background-color: $mc;
+      width: 100%;
+      max-width: 100%;
+      padding: 0 rem(25);
+
+      @media (max-width: 767.98px) {
+        background-color: #080847;
+        padding: rem(30) 0 rem(30) rem(25);
+      }
+
+      &__logo {
+        display: block;
+        max-width: rem(350);
+        width: 100%;
+        margin: auto;
+
+        @media (max-width: 767.98px) {
+          max-width: rem(200);
+          margin-left: 0;
+        }
+
+        img {
+          max-width: 100%;
+          width: 100%;
+        }
+      }
+    }
+
+    .menu {
+      background-color: $mc;
+      width: 100%;
+      padding-bottom: rem(130);
+      transition: all .3s;
+
+      @media (max-width: 1199.98px) {
+        padding-bottom: 0;
+      }
+
+      @media (max-width: 767.98px) {
+        position: absolute;
+        padding-bottom: 35%;
+        display: none;
+      }
+
+      li {
+        margin-bottom: rem(28);
+
+        @media (max-width: 1199.98px) {
+          margin-bottom: rem(15);
+        }
+
+        @media (max-width: 991.98px) {
+          margin-bottom: rem(14);
+        }
+
+        @media (max-width: 767.98px) {
+          margin-bottom: rem(17);
+        }
+
+
+        @media (max-width: 575.98px) {
+          margin-bottom: rem(18);
+        }
+
+        &:last-child {
+          margin: 0;
+        }
+
+      }
+
+      &__item {
+        font-weight: 500;
+        text-transform: uppercase;
+        position: relative;
+        color: $wc;
+
+        @media (max-width: 1199.98px) {
+          font-size: rem(15);
+        }
+
+        &:before {
+          position: absolute;
+          content: '';
+          opacity: 1;
+          background-color: $sc;
+          min-height: rem(2);
+          left: 50%;
+          bottom: rem(-5);
+          transform: translateX(-50%);
+          width: 0;
+          transition: all .3s;
+        }
+
+        &:hover {
+          color: $wc;
+
+          &:before {
+            opacity: 1;
+            width: 100%;
+          }
+        }
+
+        &--active {
+          &:before {
+            opacity: 1;
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .phoneContacts {
+      width: 100%;
+      max-width: 70%;
+      background-color: $mc;
+      transition: all .3s;
+
+      @media (max-width: 767.98px) {
+        position: absolute;
+        bottom: 0;
+        display: none;
+        max-width: rem(350);
+      }
+
+      @media (max-width: 575.98px) {
+        padding: 0;
+      }
+
+      ul {
+        column-count: 2;
+        column-gap: rem(35);
+
+        @media (max-width: 1199.98px) {
+          column-count: 1;
+        }
+
+        @media (max-width: 767.98px) {
+          column-count: 2;
+        }
+
+        @media (max-width: 575.98px) {
+          column-gap: 0;
+        }
+
+        li {
+          list-style: none;
+          position: relative;
+
+          @media (max-width: 1199.98px) {
+            margin-bottom: rem(5);
+          }
+
+
+
+          &:after {
+            position: absolute;
+            content: '/';
+            bottom: rem(0.9);
+            right: rem(-22);
+            color: $wc;
+            font-size: rem(15.9);
+
+            @media (max-width: 1199.98px) {
+              display: none;
+              right: rem(-15);
+            }
+
+            @media (max-width: 767.98px) {
+              display: block;
+            }
+
+            @media (max-width: 575.98px) {
+              right: rem(23);
+            }
+
+            @media (max-width: 370.98px) {
+              right: rem(15);
+            }
+          }
+
+          &:nth-child(3),
+          &:nth-child(4) {
+            &:after {
+              content: '';
+            }
+          }
+
+          a {
+            font-family: "Century";
+
+            @media (max-width: 991.98px) {
+              font-size: rem(15);
+            }
+
+            @media (max-width: 767.98px) {
+              font-size: rem(18);
+            }
+
+            @media (max-width: 575.98px) {
+              font-size: rem(15);
+            }
+
+            &:hover {
+              color: $sc;
+            }
+          }
+        }
+      }
+    }
+
+    .show {
+      position: relative;
+      left: 0;
+      transition: all .3s;
+      display: block;
+      padding-left: rem(25);
+    }
+  }
+
+  .mobileMenu-js {
+    height: 100vh;
+  }
+}
+
+.mobileMenu {
+  height: 100vh;
+  position: fixed;
+  z-index: 1;
+  background-color: $mc;
+  transition: all .2s;
+}

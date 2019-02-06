@@ -1,0 +1,9 @@
+@import "mixins/fontface";
+@include font-face("Gotham", "../fonts/GothamPro/GothamPro Regular/GothamPro");
+@include font-face("Century", "../fonts/CenturyGothic/CenturyGothic Regular/CenturyGothic");
+// @include font-face("Stolzl", "../fonts/Stolzl/Stolzl-Medium/Stolzl-Medium", 500);
+// @include font-face("StolzlBook", "../fonts/Stolzl/Stolzl-Book/Stolzl-Book");
+// @include font-face("Stolzl", "../fonts/Stolzl/Stolzl-Bold/Stolzl-Bold", bold);
+// @include font-face("Bell", "../fonts/Bell/BellMT/BellMT");
+// @include font-face("icon", "../fonts/icon/font/flabioiconfont");
+

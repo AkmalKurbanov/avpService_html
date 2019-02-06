@@ -1,0 +1,297 @@
+body {
+  font-family: "Gotham";
+}
+
+a {
+  transition: all .3s;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+
+  li {
+    list-style: none;
+  }
+}
+
+// .container-fluid {
+//   padding: 0;
+// }
+
+// caption
+.caption {
+  font-size: rem(46);
+  margin: 0;
+  line-height: 1.20;
+  letter-spacing: rem(-1.4);
+  text-align: left;
+  color: $mc;
+  font-weight: 400;
+  padding-right: rem(50);
+
+  @media (max-width: 1899.98px) {
+    font-size: rem(40);
+    padding-right: rem(35);
+
+    br {
+      display: none;
+    }
+  }
+
+  @media (max-width: 1599.98px) {
+    font-size: rem(35);
+    padding-right: rem(30);
+  }
+
+  @media (max-width: 1199.98px) {
+    font-size: rem(30);
+    padding-right: rem(25);
+  }
+
+  @media (max-width: 991.98px) {
+    font-size: rem(25);
+    padding-right: rem(15);
+  }
+
+  @media (max-width: 767.98px) {
+    font-size: rem(30);
+    padding-right: 0;
+    padding-left: rem(15);
+  }
+
+  @media (max-width: 575.98px) {
+    font-size: rem(25);
+  }
+
+  &--workCaption {
+    padding-left: rem(86);
+    padding-bottom: rem(10);
+
+    @media (max-width: 1599.98px) {
+      padding-left: rem(45);
+    }
+
+    @media (max-width: 991.98px) {
+      padding-left: rem(30);
+    }
+
+    @media (max-width: 767.98px) {
+      padding-left: rem(15);
+    }
+  }
+
+  &--contactsCaption {
+    @media (max-width: 767.98px) {
+      padding-left: 0;
+    }
+  }
+  &--WhiteCaption {
+    color: $wc;
+  }
+}
+
+// caption end
+
+// button
+.buttonWrap {
+  margin-top: rem(55);
+  width: 100%;
+  max-width: 100%;
+
+  @media (max-width: 1899.98px) {
+    margin-top: rem(35);
+  }
+
+  @media (max-width: 1599.98px) {
+    margin-top: rem(30);
+  }
+
+  @media (max-width: 991.98px) {
+    margin-top: rem(20);
+  }
+
+  @media (max-width: 767.98px) {
+    margin-top: rem(30);
+  }
+
+  .button {
+    background-color: $mc;
+    color: $wc;
+    max-width: rem(310);
+    width: 100%;
+    min-height: rem(85);
+    font-family: "Gotham";
+    font-size: rem(23.5);
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+
+    @media (max-width: 1899.98px) {
+      font-size: rem(20);
+      min-height: rem(70);
+      max-width: rem(270);
+    }
+
+
+
+
+    @media (max-width: 767.98px) {
+      margin: 0 auto;
+    }
+
+    @media (max-width: 575.98px) {
+      min-height: rem(70);
+      max-width: rem(250);
+    }
+
+
+    &:hover {
+      text-decoration: none;
+      background: $sc;
+    }
+  }
+
+  &--cetnterButton {
+    margin-top: 0;
+
+    .button {
+      margin: 0 auto;
+    }
+  }
+}
+
+// button end
+
+// indent
+.indent {
+  padding: rem(83) 0 0 rem(86);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @media (max-width: 1599.98px) {
+    padding: rem(45) 0 0 rem(45);
+  }
+
+    @media (max-width: 1199.98px) {
+      padding: rem(25) 0 0 rem(35);
+    }
+
+  @media (max-width: 991.98px) {
+    padding: rem(25) 0 0 rem(30);
+  }
+
+  @media (max-width: 767.98px) {
+    padding-top: rem(35);
+    padding-left: 0;
+    margin: 0;
+  }
+}
+
+// indent end
+
+// button up
+.buttonUp {
+  z-index: 1;
+  position: fixed;
+  bottom: rem(20);
+  right: rem(20);
+  max-width: rem(46);
+  width: 100%;
+  min-height: rem(46);
+  background-color: $sc;
+
+  @media (max-width: 575.98px) {
+    bottom: rem(10);
+    right: rem(10);
+    max-width: rem(30);
+    min-height: rem(30);
+  }
+
+  .upAnchor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: rem(46);
+
+    @media (max-width: 575.98px) {
+      min-height: rem(30);
+    }
+
+    &:hover {
+      i {
+        color: $mc;
+      }
+    }
+
+    i {
+      font-size: rem(30);
+      color: $wc;
+      transition: all .3s;
+    }
+  }
+
+}
+
+// button up end
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  margin: 0;
+}
+
+
+// navButtons
+.navButtons {
+  position: fixed;
+  right: rem(35);
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+
+  @media (max-width: 767.98px) {
+    display: none;
+  }
+
+  ul {
+    li {
+      margin-bottom: rem(10);
+      width: rem(9);
+      height: rem(9);
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__item {
+    max-width: rem(9);
+    width: 100%;
+    min-height: rem(9);
+    display: block;
+    border: rem(1px) solid $mc;
+    border-radius: 100%;
+
+    &:hover {
+      background-color: $sc;
+    }
+
+    &--active {
+      background-color: $sc;
+    }
+  }
+}
+
+// navButtons end

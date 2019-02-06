@@ -1,0 +1,264 @@
+.contacts {
+  padding-bottom: rem(50);
+
+  @media (max-width: 991.98px) {
+    padding-right: rem(30);
+  }
+
+  @media (max-width: 767.98px) {
+    padding-left: rem(15);
+    padding-right: rem(15);
+  }
+
+  &__wrap {
+    padding-top: rem(20);
+  }
+
+  &__desc {
+    color: #aaaaaa;
+    font-size: rem(18);
+    margin-bottom: rem(80);
+
+    @media (max-width: 1499.98px) {
+      margin-bottom: rem(50);
+    }
+
+    @media (max-width: 1199.98px) {
+      margin-bottom: rem(30);
+    }
+
+    @media (max-width: 991.98px) {
+      margin-bottom: rem(20);
+    }
+  }
+
+
+
+  &__form {
+    max-width: rem(629);
+    width: 100%;
+    float: left;
+
+
+    @media (max-width: 1499.98px) {
+      max-width: rem(550);
+    }
+
+    @media (max-width: 1399.98px) {
+      max-width: rem(400);
+    }
+
+    @media (max-width: 1199.98px) {
+      max-width: rem(320);
+    }
+
+    @media (max-width: 991.98px) {
+      max-width: 100%;
+      float: none;
+    }
+     @media (max-width: 575.98px) {
+       text-align: center;
+     }
+  }
+
+  &__input,
+  &__textarea {
+    border: rem(1) solid #e8e8e8;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    outline: none;
+    margin-bottom: rem(38);
+    padding-left: rem(15);
+    padding-right: rem(15);
+
+    @media (max-width: 767.98px) {
+      margin-bottom: rem(25);
+    }
+  }
+
+  &__input {
+    min-height: rem(54);
+
+    @media (max-width: 767.98px) {
+      min-height: rem(40);
+    }
+  }
+
+  ::-webkit-input-placeholder {
+    color: #aeaeae;
+  }
+
+  ::-moz-placeholder {
+    color: #aeaeae;
+  }
+
+  /* Firefox 19+ */
+  :-moz-placeholder {
+    color: #aeaeae;
+  }
+
+  /* Firefox 18- */
+  :-ms-input-placeholder {
+    color: #aeaeae;
+  }
+
+  &__textarea {
+    min-height: rem(265);
+    padding-top: rem(15);
+    resize: none;
+
+    @media (max-width: 767.98px) {
+      margin-bottom: rem(20);
+    }
+
+    @media (max-width: 1499.98px) {
+      min-height: rem(250);
+    }
+
+    @media (max-width: 1399.98px) {
+      min-height: rem(220);
+    }
+
+    @media (max-width: 1199.98px) {
+      min-height: rem(200);
+    }
+  }
+
+  button {
+    max-width: rem(306);
+    width: 100%;
+    min-height: rem(50);
+    background-color: $sc;
+    color: $wc;
+    border: none;
+    text-transform: uppercase;
+    transition: all .3s;
+    margin-bottom: rem(150);
+    font-weight: 900;
+    @media (max-width: 1599.98px) {
+      margin-bottom: rem(50);
+    }
+
+    @media (max-width: 1199.98px) {
+      max-width: 100%;
+      margin-bottom: rem(40);
+    }
+
+    @media (max-width: 991.98px) {
+      max-width: 100%;
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 767.98px) {
+      max-width: rem(306);
+    }
+
+    @media (max-width: 575.98px) {
+      max-width: rem(230);
+    }
+
+
+    &:hover {
+      background-color: $mc;
+      cursor: pointer;
+    }
+  }
+
+  &__infoList {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+
+    @media (max-width: 991.98px) {
+      margin-bottom: rem(40);
+    }
+
+    @media (max-width: 767.98px) {
+      text-align: left;
+    }
+
+    li {
+      display: flex;
+      align-items: center;
+      margin-bottom: rem(38);
+      position: relative;
+      padding-left: rem(80);
+      min-height: rem(54);
+      color: $mc;
+
+      @media (max-width: 1399.98px) {
+        padding-left: rem(50);
+        font-size: rem(14);
+
+        @media (max-width: 991.98px) {
+          padding-left: rem(40);
+          margin-bottom: rem(10);
+        }
+
+        @media (max-width: 767.98px) {
+          font-size: rem(16);
+          min-height: auto;
+          margin-bottom: rem(28);
+          padding-left: rem(30);
+        }
+
+        @media (max-width: 575.98px) {
+          padding-left: rem(20);
+          font-size: rem(14);
+        }
+      }
+
+      i {
+        position: absolute;
+        left: rem(40);
+        top: 50%;
+        transform: translateY(-50%);
+
+        @media (max-width: 1399.98px) {
+          left: rem(15);
+        }
+
+        @media (max-width: 991.98px) {
+          left: 0;
+        }
+      }
+
+      .fa-envelope {
+        @media (max-width: 575.98px) {
+          left: rem(-3);
+        }
+      }
+
+      a {
+        color: $mc;
+        font-weight: 500;
+        display: block;
+
+        &:hover {
+          color: $sc;
+        }
+      }
+
+
+      &:nth-child(2) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: rem(5);
+        width: 100%;
+      }
+
+      &:nth-child(3) {
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 0;
+
+        a {
+          display: block;
+          width: 100%;
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}
